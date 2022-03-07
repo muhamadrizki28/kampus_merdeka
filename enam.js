@@ -84,7 +84,8 @@ function pangkat() {
     alert('harap isi data berupa angka');
   } else {
     // sqrt()
-    let jumlah = Math.sqrt(angka1 / angka2);
+    // let jumlah = Math.sqrt(angka1, angka2);
+    let jumlah = Math.pow(angka1, angka2);
     frm.hasil.value = jumlah;
   }
 }
