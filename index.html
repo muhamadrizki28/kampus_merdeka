@@ -4,29 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tugas 6 - JS</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <title>Tugas 7 - JS</title>
+    <style>
+      p {
+        padding: 1rem;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <!-- Kalkulator -->
-    <form action="" id="formulir">
-      <div class="box-text">
-        <h1 id="heading1"></h1>
-      </div>
-      <input type="text" name="a1" id="" value="Masukkan Angka ke 1" onfocus="perubahan1()" />
-      <input type="text" name="a2" id="" value="Masukkan Angka ke 2" onfocus="perubahan2()" />
-      <input type="text" name="hasil" id="" value="Hasil" disabled />
-      <div class="box-button">
-        <button type="button" name="" onclick="tambah()">+</button>
-        <button type="button" name="" onclick="kurang()">-</button>
-        <button type="button" name="" onclick="kali()">X</button>
-        <button type="button" name="" onclick="bagi()">/</button>
-        <button type="button" name="" onclick="pangkat()">^</button>
-        <button type="button" name="" onclick="hilangall()">Batal</button>
-      </div>
-    </form>
-    <!-- JS -->
-    <script src="enam.js"></script>
+    <script>
+      // Membuat Class
+      class Gempa {
+        // Variable
+        constructor(lokasi, skala) {
+          this.lokasi = lokasi;
+          this.skala = skala;
+        }
+
+        // Fungsi
+        dampak(gempa) {
+          if (this.skala >= 0 && this.skala <= 2) gempa = 'Dampaknya tidak terasa';
+          else if (this.skala > 2 && this.skala <= 4) gempa = 'Dampaknya bangunan retak-retak';
+          else if (this.skala > 4 && this.skala <= 6) gempa = 'Dampaknya bangunan roboh';
+          else if (this.skala > 6) gempa = 'Dampaknya bangunan roboh dan berpotensi tsunami';
+          else gempa = '';
+
+          // Mencetak
+          let warna = this.skala % 2 == 0 ? '#2FA4FF' : '#E83A14';
+          let text = this.skala % 2 == 0 ? '#fff' : '#000';
+          document.write(`<p style="background-color:${warna};color:${text}">Lokasi Gempa: ${this.lokasi}</br>
+                          Skala       : ${this.skala}</br>
+                          Dampak      : ${gempa}</p></br>
+                          ------------------------------------------------</br>`);
+        }
+      }
+      // Object
+      let a = new Gempa('Amerika', 1);
+      let b = new Gempa('Belanda', 2);
+      let c = new Gempa('Cina', 3);
+      let d = new Gempa('Denmark', 4);
+      let e = new Gempa('Ekuador', 5);
+      let f = new Gempa('France', 6);
+      let g = new Gempa('Georgia', 7);
+      let h = new Gempa('Honduras', 8);
+      let i = new Gempa('Indonesia', 9);
+      let j = new Gempa('Jepang', 10);
+
+      // Pemanggilan
+      a.dampak();
+      b.dampak();
+      c.dampak();
+      d.dampak();
+      e.dampak();
+      f.dampak();
+      g.dampak();
+      h.dampak();
+      i.dampak();
+      j.dampak();
+    </script>
   </body>
 </html>
