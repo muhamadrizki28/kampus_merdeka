@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Secular+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #2fa4ff;
+}
+main > section {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+.box-tugas1,
+.box-tugas2 {
+  position: relative;
+  width: 100%;
+  height: 45%;
+}
+.box-tugas1 h1,
+.box-tugas2 h1 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  top: 5%;
+  color: #fff;
+}
+.box-tugas1 h1::first-letter,
+.box-tugas2 h1::first-letter {
+  color: tomato;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.box-tugas1 > p,
+.box-tugas2 > p {
+  color: #fff;
+  margin: auto;
+  font-weight: bolder;
+  border-bottom: 1px solid tomato;
+  width: fit-content;
+  animation: gerak 2s ease-in-out infinite alternate;
+}
+@keyframes gerak {
+  0% {
+    border-bottom: 1px solid tomato;
+  }
+  100% {
+    border-bottom: 10px solid tomato;
+  }
+}
+.box-tugas1 .box-main1 {
+  position: relative;
+  top: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-tugas1 .box-gambar-all {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  background-color: red;
+  margin: 0 0.5rem;
+}
+.box-gambar-all .gambar {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 70%;
+}
+.box-gambar-all .text {
+  margin-top: 0%;
+  display: none;
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  height: 25%;
+}
+
+/* tugas 2 */
+.box-tugas2 {
+  padding-bottom: 4rem;
+}
+.box-tugas2 h1 {
+  margin: 1rem;
+}
+.box-button-all {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  width: 70%;
+  height: 90px;
+  margin: 2rem auto;
+  background-color: #0e185f;
+}
+.box-button-all .fa-caret-down {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.box-text-all {
+  padding: 1rem 3rem;
+  text-align: justify;
+  margin: 2rem auto 0 auto;
+  width: 70%;
+  display: none;
+  color: #fff;
+  background-color: #0e185f;
+}
